@@ -24,7 +24,7 @@ window.onload = (e)=>{
 			if(code){
 				drawRect(code.location);// Rect
 				msg.innerText = code.location;
-				//msg.innerText = code.data;// Data
+				msg.innerText = code.data;// Data
 			}else{
 				msg.innerText = "Detecting QR-Code...";
 			}
@@ -32,6 +32,7 @@ window.onload = (e)=>{
 		setTimeout(startTick, 250);
 	}
 
+	
 	function drawRect(location){
 		drawLine(location.topLeftCorner,     location.topRightCorner);
 		drawLine(location.topRightCorner,    location.bottomRightCorner);
